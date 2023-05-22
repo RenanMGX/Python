@@ -36,7 +36,7 @@ def alterar_htm(caminho):
 # copia o arquivo para a pasta
 def copiar_arquivo(destino_path):
     # caminho de origem dos arquivos de imagem
-    origem_path = '\\\\server011\\NETLOGON\\ASSINATURA\\'
+    origem_path = 'caminho da imagem original'
     # listar todos os arquivos no caminho de origem
     arquivos = os.listdir(origem_path)
     # encontrar o arquivo de imagem
