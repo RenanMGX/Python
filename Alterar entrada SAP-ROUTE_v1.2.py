@@ -16,7 +16,7 @@ def alterar_arquivo_xml(caminho):
 
     # Procurar a tag <Service> com o atributo 'name' igual a 'S4P'
     for service in root.iter('Service'):
-        if service.get('server') == 'vhpats4pci.sap.patrimar.com.br:3200':
+        if service.get('server') == 'nome_servidor:3200':
             # Alterar os atributos da tag <Service>
             service.set('name', 'S4P')
             service.set('server', 'PUBLIC')
@@ -43,7 +43,7 @@ def alterar_arquivo_xml(caminho):
             messageserver = ET.SubElement(messageservers, 'Messageserver')
             messageserver.set('uuid', 'bf19a9e2-f820-4ab6-b47d-9efd33fef09c')
             messageserver.set('name', 'S4P')
-            messageserver.set('host', 'vhpats4pci.sap.patrimar.com.br')
+            messageserver.set('host', 'nome_servidor')
             messageserver.set('port', '3601')
 
     # Adicionar a nova tag <Routers>
