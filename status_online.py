@@ -4,10 +4,11 @@ import socket
 
 #Cria uma lista para armazenar os nomes dos computadores
 computers = []
+nome_maquina = "digite o nome da maquina"
 
-#Popula a lista com os nomes dos computadores de "patrimar001" até "patrimar250"
+#Popula a lista com os nomes dos computadores de 
 for i in range(1, 251):
-    computers.append("patrimar" + str(i))
+    computers.append(nome_maquina + str(i))
 
 #Laço infinito para verificar o status de conexão dos computadores
 while True:
