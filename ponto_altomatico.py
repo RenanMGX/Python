@@ -8,7 +8,7 @@ import datetime
 #locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 # pasta com os arquivos
-source_folder = r"\\server008\G\ARQ_PATRIMAR\WORK\PONTO\ultimos_arquivos"
+source_folder = r"c:\caminho arquivos originais"
 
 # cria uma pasta nova com a data atual
 today = datetime.date.today()
@@ -44,7 +44,7 @@ elif mes == "11 - November":
 elif mes == "12 - December":
     mes = "12 - Dezembro"
 
-new_folder = os.path.join(r"\\server008\G\ARQ_PATRIMAR\WORK\PONTO\Escritório Central", str(yesterday.year), mes, f"dia {yesterday.day}")
+new_folder = os.path.join(r"c:\caminho arquivos finais", str(yesterday.year), mes, f"dia {yesterday.day}")
 
 ano_atual = datetime.datetime.now().year
 
