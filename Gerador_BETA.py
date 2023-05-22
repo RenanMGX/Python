@@ -128,7 +128,7 @@ def save_sheets_as_pdf(workbook, excel, sheetname):
     worksheet.PageSetup.BottomMargin = excel.InchesToPoints(0.75)
     # Definindo o intervalo de impressão
     worksheet.PageSetup.PrintArea = 'A1:M47'
-    caminho = f"\\\\server008\\G\\ARQ_PATRIMAR\\Setores\\Financas\\Planejamento_Financeiro\\CONTROLADORIA_ROTINAS\\Controles\\Reembolso de Despesas Administrativas\\{data_atual.year}\\{converter_data(data_atual, apenas_mes=True)}\\NDs\\"
+    caminho = f"caminho_onde_sera_salvo\\{data_atual.year}\\{converter_data(data_atual, apenas_mes=True)}\\NDs\\"
     caminho = verificar_caminho(caminho)
     # Imprimindo a planilha como PDF
     pdf_path = f'{caminho}{sheetname}.pdf'
