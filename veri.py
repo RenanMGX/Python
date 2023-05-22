@@ -6,6 +6,8 @@ import subprocess
 import openpyxl
 from time import sleep
 
+nome_maquina = "digite o nome da maquina"
+
 # adiciona os dados na planilha do excel
 def add_to_excel(hostname, username):
     # verifica se o arquivo já existe, se sim adiciona os dados a planilha existente, senão cria uma nova
@@ -28,11 +30,11 @@ while contador <= 250:
     print("\n")
     # Verificando se o computador está online
     if len(str(contador)) == 1:
-        hostname = "patrimar00" + str(contador)
+        hostname = f"{nome_maquina}00" + str(contador)
     elif len(str(contador)) == 2:
-        hostname = "patrimar0" + str(contador)
+        hostname = f"{nome_maquina}0" + str(contador)
     else:
-        hostname = "patrimar" + str(contador)
+        hostname = f"{nome_maquina}" + str(contador)
     # if socket.gethostbyname(hostname):
     #     print(f"{hostname} está online.")
     response = os.system("ping -c 1 " + hostname)
@@ -59,7 +61,7 @@ while contador <= 250:
         contador += 1
         continue
     username = str(username)
-    username = username.split("PATRIMAR\\")
+    username = username.split(f"{nome_maquina.upper()}\\")
     print(username)
     if len(username) == 1:
         username = "vazio"
